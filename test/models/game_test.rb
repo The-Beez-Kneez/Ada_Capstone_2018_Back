@@ -1,9 +1,23 @@
 require "test_helper"
 
 describe Game do
-  let(:game) { Game.new }
+  before do
+    @game = games(:anthem)
+  end
 
-  it "must be valid" do
-    value(game).must_be :valid?
+  describe 'Constructor' do
+    it 'can be created' do
+      assert @game.valid?
+    end
+  end
+  describe 'relations' do
+    it 'has Reviews' do
+      @game.must_respond_to :reviews
+    end
+
+    it 'has Recommendations' do
+      @game.must_respond_to :recommendations
+    end
   end
 end
+# TODO: Tests for class method find_by_tags

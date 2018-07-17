@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  content: MyText
+  title: "Awesome Review"
+  content: "MyText"
+  game: anthem
+  tags:
+    - adventure
 
 two:
   title: MyString
   content: MyText
+  game: doom
